@@ -101,4 +101,43 @@ void tokenizing() {
 		
 	}
 	printf("*** End of Tokenizing Phrases Demo ***\n\n");
+printf("*** Start of Tokenizing Sentences Demo ***\n");
+ 
+ //create char array with (199 + \0) symbols limit
+ char sentences[200];
+
+ //create a pointer "sentence"
+ char* sentence;
+ 
+ //create int variable to count sentences
+ int s_counter;
+ 
+ //loop to prompt the user to enter words or q - to quit
+  while (TRUE) {
+	printf("Type a few sentences separated by dot(q - to quit):\n");
+	
+	//get input from a user and store it in "sentences"
+	gets(sentences);
+	
+	//compare phrases string and "q". If equal exit the loop
+	if (strcmp(sentences, "q") == 0) break;
+	
+	//store in sentence first token delimited by "."
+	sentence = strtok(sentences, ".");
+	
+	//set s_counter to 1
+	s_counter = 1;
+	
+	// loop to print all the tokens while word is not NULL
+	while (sentence) {
+		
+		//print sentence and number, add 1 to c_counter
+		printf("sentence #%d is \'%s\'\n", s_counter++, sentence);
+		
+		//next tokenizing by ".". If all word tokenized - return NULL
+		sentence = strtok(NULL, ".");
+	}
+
+  }
+ printf("*** End of Tokenizing Sentences Demo ***\n\n");
 }
