@@ -28,4 +28,19 @@ void converting() {
 		printf("Converted number is %f\n", double_number); // prints the output of converted number
 	}
 	printf("*** Start of Converting Strings to double Demo ***\n\n"); //This line shows the end of the conversion
+	
+	{
+		printf("*** Start of Converting Strings to long Demo ***\n"); // This line shows the start of conversion
+		char long_string[80]; // array used for string to store numbers enter from user.
+		double long_number; // this will store the converted integer value
+		while (TRUE) // while loop used after checking the condition 
+		{
+			printf("Type the long numeric string (q - to quit):\n"); // this prompts user to enter a number
+			gets(long_string); // Gets input number from the user
+			if (strcmp(long_string, "q") == 0) break; //checks for the input entered
+			long_number = atol(long_string); // Converts the number entered as a character into string using ATOI
+			printf("Converted number is %ld\n", long_number); // prints the output of converted number
+		}
+		printf("*** End of Converting Strings to long Demo ***\n\n"); //This line shows the end of the conversion
+	}
 }
