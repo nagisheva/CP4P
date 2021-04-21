@@ -49,5 +49,25 @@ void fundamentals() {
 	
 	}
 	printf("*** Start of Measuring Strings Demo ***\n\n");
-
+// This line shows the start of conversion
+	printf("*** Start of Copying String Demo***\n");
+	//declaration of char array
+	char destination[80];
+	//declaration of char array
+	char source[80];
+	while (TRUE)
+	// while loop used after checking the condition
+	{
+		destination[0] = '\0';
+		printf("Destination string is reset to empty\n");
+		//gets input from user 
+		printf("Type a source string (q - to quit):\n");
+		// gets the input for source
+		gets(source);
+		//if condition implemented
+		if (strcmp(source, "q") == 0) break;
+		printf("New destination string is \'%s\':\n", destination);
+	}
+	//This line shows the end of the conversion
+	printf("*** End of Copying String Demo***\n\n");
 }
